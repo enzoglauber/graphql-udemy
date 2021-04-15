@@ -4,10 +4,10 @@ const resolvers = require('./resolvers')
 
 const schemaPath = './schema/index.graphql'
 const server = new ApolloServer({
-    typeDefs: importSchema(schemaPath),
-    resolvers
+  typeDefs: importSchema(schemaPath),
+  resolvers
 })
 
 server.listen().then(({ url }) => {
-    console.log(`Executando em ${url}`)
+  console.log(`Executando em ${url}`)
 })
