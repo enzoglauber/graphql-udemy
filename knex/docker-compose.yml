@@ -1,0 +1,12 @@
+database:
+  image: mysql:5.7.33
+  # command: --default-authentication-plugin=mysql_native_password
+  volumes:
+    - dbdata:/var/lib/mysql
+  environment:
+    MYSQL_DATABASE: knex
+    MYSQL_USER: admin
+    MYSQL_PASSWORD: root
+    MYSQL_ROOT_PASSWORD: root
+  ports:
+    - 3306:3306
